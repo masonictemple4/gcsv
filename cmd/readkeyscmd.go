@@ -11,7 +11,7 @@ import (
 )
 
 var readKeysCmd = &cobra.Command{
-	Use:   "read-keys",
+	Use:   "read-keys <filepath>",
 	Short: "Get the keys from the csv.",
 	Long:  "Get the keys from the csv.",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -26,6 +26,10 @@ var readKeysCmd = &cobra.Command{
 		}
 		readKeys(args[0])
 	},
+}
+
+func init() {
+	rootCmd.AddCommand(readKeysCmd)
 }
 
 func readKeys(path string) {
