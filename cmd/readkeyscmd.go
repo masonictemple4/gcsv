@@ -49,5 +49,5 @@ func readKeys(path string) {
 	for k := range keys {
 		println(keys[k])
 	}
-	fmt.Printf("The csv has: %d keys", len(keys))
+	fmt.Printf("The csv has: %d keys\n", len(keys))
 }
